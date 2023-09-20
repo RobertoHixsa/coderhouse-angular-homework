@@ -1,0 +1,28 @@
+<mat-drawer-container class="page page-container" autosize>
+  <mat-drawer #drawer class="page page-sidenav" mode="side">
+    <p>Se ajusta automaticamente nav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button
+      (click)="showFiller = !showFiller"
+      mat-raised-button
+      class="page-toggle"
+    >
+      Mas contenido
+    </button>
+  </mat-drawer>
+  <mat-toolbar class="page page-toolbar">
+    <button
+      mat-icon-button
+      aria-label="Open sidenav"
+      (click)="drawer.toggle()"
+      class="page-toggle"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="grid-container">
+    <h3 class="item item--1">Mozaico 1</h3>
+    <h3 class="item item--2">Mozaico 2</h3>
+    <h3 class="item item--3">Mozaico 3</h3>
+  </div>
+</mat-drawer-container>
