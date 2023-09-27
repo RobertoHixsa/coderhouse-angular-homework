@@ -1,1 +1,20 @@
-<router-outlet> </router-outlet>
+<mat-drawer-container class="page page-container" autosize>
+  <mat-drawer #drawer class="page page-sidenav" mode="side">
+    <a mat-raised-button class="page-toggle" routerLink="/students">
+      Ir a estudiantes
+    </a>
+  </mat-drawer>
+  <mat-toolbar class="page page-toolbar">
+    <button
+      mat-icon-button
+      aria-label="Open sidenav"
+      (click)="drawer.toggle()"
+      class="page-toggle"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet> </router-outlet>
+  </div>
+</mat-drawer-container>
