@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StudentsModule } from './modules/students/students.module';
 
 const routes: Routes = [
   {
@@ -15,6 +14,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/students/students.module').then(
         (m) => m.StudentsModule
+      ),
+  },
+  {
+    path: 'students/signup',
+    loadChildren: () =>
+      import('./modules/create-student/create-student.module').then(
+        (m) => m.CreateStudentModule
       ),
   },
 ];

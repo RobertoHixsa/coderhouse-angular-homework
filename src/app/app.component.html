@@ -1,9 +1,21 @@
 <mat-drawer-container class="page page-container" autosize>
   <mat-drawer #drawer class="page page-sidenav" mode="side">
-    <a mat-raised-button class="page-toggle" routerLink="/students">
-      Ir a estudiantes
-    </a>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/"> Inicio </a>
+    </div>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/students">
+        Ir a estudiantes
+      </a>
+    </div>
+
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/students/signup">
+        Crear estudiantes
+      </a>
+    </div>
   </mat-drawer>
+
   <mat-toolbar class="page page-toolbar">
     <button
       mat-icon-button
