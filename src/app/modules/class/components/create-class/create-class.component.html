@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Crear un nuevo curso</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="form">
+    <form [formGroup]="form" (submit)="submit()">
+      <mat-grid-list cols="2" rowHeight="100px">
+        <mat-grid-tile colspan="2">
+          <mat-form-field appearance="fill">
+            <mat-label>Codigo de clase</mat-label>
+            <input matInput placeholder="F2" formControlName="name" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input
+                matStartDate
+                formControlName="startDate"
+                placeholder="Start date"
+              />
+              <input
+                matEndDate
+                formControlName="endDate"
+                placeholder="End date"
+              />
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <button
+            mat-raised-button
+            color="warn"
+            aria-label="Example icon button with a home icon"
+          >
+            <mat-icon>add</mat-icon>Crear
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </mat-card-content>
+</mat-card>

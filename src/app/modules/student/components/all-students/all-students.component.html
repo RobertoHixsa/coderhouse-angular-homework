@@ -1,0 +1,32 @@
+<div>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="currentGrade">
+      <mat-header-cell *matHeaderCellDef> Calificacion actual </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.currentGrade }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="estatus">
+      <mat-header-cell *matHeaderCellDef> Aprobado </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-icon [style.color]="element.currentGrade > 70 ? 'green' : 'red'">
+          fiber_manual_record
+        </mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

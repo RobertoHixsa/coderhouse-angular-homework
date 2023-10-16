@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgIf } from '@angular/common';
-
+import { CommonModule, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { StudentsRoutingModule } from './students-routing.module';
 import { MatDividerModule } from '@angular/material/divider';
-import { StudentsComponent } from './students.component';
+import CourseRoutingModule from './course-routing.module';
+import { CreateCourseComponent } from './components/create-course/create-course.component';
+import { AllCoursesComponent } from './components/all-courses/all-courses.component';
 
 @NgModule({
-  declarations: [StudentsComponent],
+  declarations: [CreateCourseComponent, AllCoursesComponent],
   imports: [
     CommonModule,
     NgIf,
@@ -21,8 +20,8 @@ import { StudentsComponent } from './students.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    StudentsRoutingModule,
+    CourseRoutingModule,
     MatDividerModule,
   ],
 })
-export class StudentsModule {}
+export class CourseModule {}

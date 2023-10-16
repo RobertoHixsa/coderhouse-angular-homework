@@ -3,15 +3,33 @@
     <div>
       <a mat-raised-button class="page-toggle" routerLink="/"> Inicio </a>
     </div>
+    <mat-divider [inset]="true"></mat-divider>
     <div>
-      <a mat-raised-button class="page-toggle" routerLink="/students">
-        Ir a estudiantes
+      <a mat-raised-button class="page-toggle" routerLink="/student">
+        Estudiantes
       </a>
     </div>
-
     <div>
-      <a mat-raised-button class="page-toggle" routerLink="/students/signup">
-        Crear estudiantes
+      <a mat-raised-button class="page-toggle" routerLink="/student/add">
+        Crear estudiante
+      </a>
+    </div>
+    <mat-divider [inset]="true"></mat-divider>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/class"> Clase </a>
+    </div>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/class/add">
+        Crear clase
+      </a>
+    </div>
+    <mat-divider [inset]="true"></mat-divider>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/course"> Cursos </a>
+    </div>
+    <div>
+      <a mat-raised-button class="page-toggle" routerLink="/course/add">
+        Crear curso
       </a>
     </div>
   </mat-drawer>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CourseModule } from './modules/course/course.module';
 
 const routes: Routes = [
   {
@@ -10,18 +11,19 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'students',
+    path: 'student',
     loadChildren: () =>
-      import('./modules/students/students.module').then(
-        (m) => m.StudentsModule
-      ),
+      import('./modules/student/student.module').then((m) => m.StudentModule),
   },
   {
-    path: 'students/signup',
+    path: 'class',
     loadChildren: () =>
-      import('./modules/create-student/create-student.module').then(
-        (m) => m.CreateStudentModule
-      ),
+      import('./modules/class/class.module').then((m) => m.ClassModule),
+  },
+  {
+    path: 'course',
+    loadChildren: () =>
+      import('./modules/course/course.module').then((m) => m.CourseModule),
   },
 ];
 
