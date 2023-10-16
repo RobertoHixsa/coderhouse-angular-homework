@@ -4,3 +4,20 @@
 .page-toggle {
   background-color: #e63946;
 }
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+.page-sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.page-link {
+  display: flex;
+  margin: 20px auto;
+}
+mat-divider {
+  background-color: red;
+}

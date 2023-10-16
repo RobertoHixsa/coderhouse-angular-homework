@@ -1,39 +1,41 @@
 <mat-drawer-container class="page page-container" autosize>
-  <mat-drawer #drawer class="page page-sidenav" mode="side">
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/"> Inicio </a>
-    </div>
-    <mat-divider [inset]="true"></mat-divider>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/student">
-        Estudiantes
-      </a>
-    </div>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/student/add">
-        Crear estudiante
-      </a>
-    </div>
-    <mat-divider [inset]="true"></mat-divider>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/class"> Clase </a>
-    </div>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/class/add">
-        Crear clase
-      </a>
-    </div>
-    <mat-divider [inset]="true"></mat-divider>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/course"> Cursos </a>
-    </div>
-    <div>
-      <a mat-raised-button class="page-toggle" routerLink="/course/add">
-        Crear curso
-      </a>
+  <mat-drawer #drawer class="page" mode="side">
+    <div class="page-sidenav">
+      <div>
+        <mat-divider [inset]="true"></mat-divider>
+        <a mat-raised-button class="page-link" routerLink="/"> Inicio </a>
+        <mat-divider [inset]="true"></mat-divider>
+      </div>
+      <div>
+        <mat-divider [inset]="true"></mat-divider>
+        <div>
+          <a mat-raised-button class="page-link" routerLink="/student">
+            Estudiantes
+          </a>
+          <a mat-raised-button class="page-link" routerLink="/student/add">
+            Crear estudiante
+          </a>
+          <mat-divider [inset]="true"></mat-divider>
+        </div>
+      </div>
+      <div>
+        <mat-divider [inset]="true"></mat-divider>
+        <a mat-raised-button class="page-link" routerLink="/class"> Clase </a>
+        <a mat-raised-button class="page-link" routerLink="/class/add">
+          Crear clase
+        </a>
+        <mat-divider [inset]="true"></mat-divider>
+      </div>
+      <div>
+        <mat-divider [inset]="true"></mat-divider>
+        <a mat-raised-button class="page-link" routerLink="/course"> Cursos </a>
+        <a mat-raised-button class="page-link" routerLink="/course/add">
+          Crear curso
+        </a>
+        <mat-divider [inset]="true"></mat-divider>
+      </div>
     </div>
   </mat-drawer>
-
   <mat-toolbar class="page page-toolbar">
     <button
       mat-icon-button
@@ -43,6 +45,7 @@
     >
       <mat-icon>menu</mat-icon>
     </button>
+    <span>Escuela Angular</span>
   </mat-toolbar>
   <div class="container">
     <router-outlet> </router-outlet>

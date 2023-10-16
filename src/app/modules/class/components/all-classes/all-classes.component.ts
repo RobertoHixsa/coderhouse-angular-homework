@@ -14,7 +14,6 @@ export class AllClassesComponent {
   constructor(private classService: ClassService) {}
 
   ngOnInit(): void {
-    console.log(this.classService.classes);
     this.dataSource = this.classService.classes;
   }
 }
