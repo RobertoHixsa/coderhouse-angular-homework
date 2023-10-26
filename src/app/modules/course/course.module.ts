@@ -9,6 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import CourseRoutingModule from './course-routing.module';
 import { CreateCourseComponent } from './components/create-course/create-course.component';
 import { AllCoursesComponent } from './components/all-courses/all-courses.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [CreateCourseComponent, AllCoursesComponent],
@@ -22,6 +23,7 @@ import { AllCoursesComponent } from './components/all-courses/all-courses.compon
     MatListModule,
     CourseRoutingModule,
     MatDividerModule,
+    SharedModule,
   ],
 })
 export class CourseModule {}
