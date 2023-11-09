@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Student } from '../models';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StudentService {
+  constructor(private httpClient: HttpClient) {}
+
   students: Student[] = [
     {
       name: 'Bob Marley',

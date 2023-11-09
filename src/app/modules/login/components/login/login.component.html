@@ -1,0 +1,26 @@
+<div class="login">
+  <div class="form">
+    <mat-card>
+      <mat-card-header class="form__header">
+        <mat-card-title
+          ><h1 class="form__title">Iniciar sesion</h1></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <form class="form__flex" [formGroup]="form">
+          <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <input formControlName="username" matInput />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" matInput type="password" />
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="login()">
+            Ingresar
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
