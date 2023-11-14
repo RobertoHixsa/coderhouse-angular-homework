@@ -14,8 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 @NgModule({
+  providers: [provideAnimations()],
   exports: [
     CommonModule,
     MatSidenavModule,
@@ -32,6 +34,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSidenavModule,
   ],
 })
 export class SharedModule {}

@@ -13,4 +13,8 @@ describe('StudentService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('gets all the 5 students', () => {
+    expect(service.students.length).toBeGreaterThanOrEqual(5);
+  });
 });

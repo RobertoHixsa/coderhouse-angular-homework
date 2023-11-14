@@ -6,8 +6,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class StudentService {
-  constructor(private httpClient: HttpClient) {}
-
   students: Student[] = [
     {
       name: 'Bob Marley',
@@ -23,6 +21,16 @@ export class StudentService {
       name: 'Mariya Takeuchi',
       email: 'mariya@email.com',
       currentGrade: 91,
+    },
+    {
+      name: 'Kurko Bain',
+      email: 'kurko@email.com',
+      currentGrade: 61,
+    },
+    {
+      name: 'Frank Sinatra',
+      email: 'frank@email.com',
+      currentGrade: 69,
     },
   ];
 }

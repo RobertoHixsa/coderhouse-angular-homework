@@ -16,4 +16,10 @@ export class AllStudentsComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource = this.studentService.students;
   }
+
+  getApprovedStudents() {
+    return this.studentService.students.filter(
+      (student) => student.currentGrade >= 70
+    );
+  }
 }
