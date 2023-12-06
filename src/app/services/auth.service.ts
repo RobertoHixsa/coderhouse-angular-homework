@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../environments/environment.local';
 
 @Injectable({
   providedIn: 'root',
@@ -15,8 +16,9 @@ export class AuthService {
   isAuthenticated = false;
 
   login() {
-    this.router.navigateByUrl('/');
-    this.isAuthenticated = true;
+    console.log(environment.apiUrl);
+    // this.router.navigateByUrl('/');
+    // this.isAuthenticated = true;
   }
 
   logout() {

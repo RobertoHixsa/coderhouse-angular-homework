@@ -21,9 +21,6 @@ export class LoginComponent {
   login() {
     const USERNAME = this.form.value['username'];
     const PASSWORD = this.form.value['password'];
-    const ADMIN = this.authService.admin;
-    if (ADMIN.username === USERNAME && ADMIN.password === PASSWORD) {
-      this.authService.login();
-    }
+    this.authService.login();
   }
 }
